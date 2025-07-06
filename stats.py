@@ -5,5 +5,7 @@ def char_count(book_text):
     char_dict = {}
     for c in book_text:
         if c.lower() not in char_dict:
-            char_dict[c.lower()] = 0
+            char_dict[c.lower()] = 1
+        else:
+            char_dict[c.lower()] += 1
     return char_dict
