@@ -15,6 +15,7 @@ def sorted_chars(char_dict):
     for i in char_dict:
         sorted_list.append({"char": i, "num": char_dict[i]})
     sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
 
 def sort_on(items):
     return items["num"]

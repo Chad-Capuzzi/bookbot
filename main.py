@@ -10,6 +10,19 @@ def main():
     num_words = count_words(book_text)
     characters = char_count(book_text)
     sorted_list = sorted_chars(characters)
-    print(f"{num_words} words found in the document")
-    print(characters)
+    #print(f"{num_words} words found in the document")
+    print(f"""
+============ BOOKBOT ============
+Analyzing book found at books/frankenstein.txt...
+----------- Word Count ----------
+Found {num_words} total words
+--------- Character Count -------
+""")
+    
+    for i in sorted_list:
+        if i["char"].isalpha():
+            print(f"{i["char"]}: {i["num"]}")
+    print("============= END ===============")
+    
+    
 main()
